@@ -1,0 +1,32 @@
+@model InjectionDemo.Models.Question
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (Model == null)
+{
+    <h1>Stel je vraag</h1>
+
+    <Form asp-action="SubmitQuestion">
+        <div class="form-group">
+            <label for="title">Titel</label>
+            <input id="title" name="Title" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Beschrijving</label>
+            <textarea id="description" name="Description" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Stel je vraag" class="btn btn-primary"/>
+        </div>
+    </Form>
+}
+@if (Model != null)
+{
+    <h1>Bekijk je gestelde vraag</h1>
+
+    <h3>Uw Vraag: @Model.Title</h3>
+    <p>@Html.Raw(Model.Description)</p>
+}

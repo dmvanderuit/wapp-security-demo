@@ -1,0 +1,50 @@
+@model IEnumerable<InjectionDemo.Models.BankAccount>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Zoek een bankrekening</h1>
+
+<Form asp-action="Search">
+    <div class="form-group">
+        <label for="accountNumber">Rekeningnummer (bijvoorbeeld 001)</label>
+        <input id="accountNumber" name="AccountNumber" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Zoek" class="btn btn-primary"/>
+    </div>
+</Form>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Rekeningnummer
+            </th>
+            <th>
+                Saldo
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountNumber)
+                </td>
+                <td>
+                    &euro; @Html.DisplayFor(modelItem => item.Balance)
+                </td>
+            </tr>
+        }
+
+        </tbody>
+    </table>
+}
