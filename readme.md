@@ -25,7 +25,7 @@ testdata.
 
 Om de database te starten met een lokale database (aangeraden voor Windows-gebruikers), kopieer je het
 bestand `appsettings.LocalDB.json` en hernoem je de kopie naar `appsettings.json`. Vervolgens moet de database aangemaakt
-worden. Dit gebeurd doormiddel van EF Core. Voeren het volgende commando uit in de therminal ``` CRTL+` ``` om een database aan te maken
+worden. Dit gebeurd doormiddel van EF Core. Voeren het volgende commando uit in de terminal ``` CRTL+` ``` om een database aan te maken
 ```
 dotnet ef database update
 ```
@@ -42,6 +42,11 @@ Kopieer het bestand `appsettings.Docker.json` en hernoem de kopie naar `appsetti
 terminal-venster (en navigeer naar de root van het project, waar ook de nieuwe `appsettings.json` staat) en run het
 volgende commando: `docker-compose -f Docker/docker-compose.yml up`. Start de applicatie en alles draait met de database
 in Docker. Je kunt eventueel zelf de data inzien door te verbinden via een database-programma op poort 1433.
+
+Open een nieuw terminalvenster en run het volgende commando:
+```
+dotnet ef database update
+```
 
 Start de applicatie en alles draait
 met een lokale database.
