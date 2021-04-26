@@ -46,7 +46,7 @@ in Docker. Je kunt eventueel zelf de data inzien door te verbinden via een datab
 Start de applicatie en alles draait
 met een lokale database.
 
-### Uitvoeren
+## Uitvoeren
 Open de browser en ga naar `https://localhost:44365/`. 
 Je bent nu op de website van een bank. 
 Klik op `Rekening inzien` voor het uitvoeren van een SQL Injection. 
