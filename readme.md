@@ -25,7 +25,7 @@ testdata.
 
 Om de database te starten met een lokale database (aangeraden voor Windows-gebruikers), kopieer je het
 bestand `appsettings.LocalDB.json` en hernoem je de kopie naar `appsettings.json`. Vervolgens moet de database aangemaakt
-worden. Dit gebeurd doormiddel van EF Core. Voeren het volgende commando uit in de terminal ``` CRTL+` ``` om een database aan te maken
+worden. Dit gebeurd doormiddel van EF Core. Voer het volgende commando uit in de terminal ``` CRTL+` ``` om een database aan te maken
 ```
 dotnet ef database update
 ```
@@ -52,11 +52,11 @@ Start de applicatie en alles draait
 met een lokale database.
 
 ## Uitvoeren
-Open de browser en ga naar `https://localhost:44365/`. 
+Open de browser en ga naar de applicatie. 
 Je bent nu op de website van een bank. 
 Klik op `Rekening inzien` voor het uitvoeren van een SQL Injection. 
 
-1. Zoek op brankrekening nummer 001 en bekijk de data die is opgehaald.
+1. Zoek op bankrekening nummer 001 en bekijk de data die is opgehaald.
 2. Voer vervolgens een SQL injection in het zoek veld. `1 or 1=1` 
 3. Bekijk de injection en vraag jezelf af wat je hier nu precies doet.
 4. Alle rekeningnummers zijn nu opgehaald uit de database, Gefeliciteerd je bent een hacker!.
@@ -72,6 +72,6 @@ Doordat hier de input geladen wordt. Kunnen we een XSS Injection invoeren.
 3. Klik op `Stel je vraag`
 4. Het zojuist ingevoerde script is nu uitgevoerd.
 
-Je hebt nu twee vormen van injections uitgevoert een SQL en XSS Injection
+Je hebt nu twee vormen van injections uitgevoerd een SQL en XSS Injection
 
 
