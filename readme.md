@@ -1,7 +1,6 @@
 # Workshop/Demo
 
-In deze Repo staan alle benodigheden voor het uitvoeren van de SQL/XSS Injection (en Identity Server / Azure Identity)
-workshop.
+In deze Repo staan alle benodigheden voor het uitvoeren van de SQL/XSS Injection workshop.
 
 ## Introductie SQL/XSS Injection
 
