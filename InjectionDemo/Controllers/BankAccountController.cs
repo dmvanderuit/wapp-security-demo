@@ -26,10 +26,10 @@ namespace InjectionDemo.Controllers
 
         public async Task<IActionResult> Search([FromForm] BankAccountRequest account)
         {
-            var retrievedAccount = await _context.BankAccounts.FromSqlRaw(
-                "SELECT * FROM dbo.BankAccounts WHERE AccountNumber = " +
-                account.AccountNumber).ToListAsync();
-            
+            var retrievedAccount =
+                await _context.BankAccounts.Where(acc =>
+                    acc.AccountNumber == account.AccountNumber).ToListAsync();
+
             return View("Index", retrievedAccount);
         }
 
